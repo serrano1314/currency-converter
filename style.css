@@ -1,0 +1,17 @@
+.container {
+    background-color: #7e7e7e;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.converter-card{
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
+}
+body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}

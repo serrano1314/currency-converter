@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <p>Currency might change anytime, especially cryptocurrency because of its volatility</p>
+        <div class="converter-card">
+            <select name="coin" id="coin">
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ripple">Ripple</option>
+                <option value="bnb">BNB</option>
+                <option value="eth">Ethereum</option>
+                <input type="number" class="input-price" value=1>
+            
+            <select name="coin" id="coin">
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ripple">Ripple</option>
+                <option value="bnb">BNB</option>
+                <option value="eth">Ethereum</option>
+            </select><br/>
+            <input type="text" class="output-price" value="1 BTC" readonly>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
