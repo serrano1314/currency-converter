@@ -1,17 +1,19 @@
 .container {
     background-color: #7e7e7e;
     height: 200px;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: center;
+
 }
 .converter-card{
-    display: flex;
-    justify-content: inherit;
-    align-items: inherit;
+    background-color: khaki;
+    display: block;
+    margin: 0 10%;
 }
 body {
-    display: flex;
+    height: 100vh;
     margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -29,6 +31,10 @@ input[type=number]::-webkit-inner-spin-button {
     width: 35px;
     height: 35px;
 }
-footer{
-    
+.foot{
+    text-align: center;
+    width: 100%;
+    background-color: lightblue;
+    position: fixed;
+    bottom: 0;
 }
