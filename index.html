@@ -11,30 +11,33 @@
     <div class="container">
         <div class="webpage-name">
             <h1>Currency Converter</h1>
-            <p>Currency might change anytime, especially cryptocurrency because of its volatility</p>
+            <p>Currency might change anytime, 
+                especially cryptocurrency because of its volatility</p>
         </div>
         <div class="converter-card">
-            <select name="coin" id="coin">
-                <option value="php">PHP</option>
-                <option value="usd">USD</option>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="ripple">Ripple</option>
-                <option value="bnb">BNB</option>
-                <option value="eth">Ethereum</option>
-            </select>
-            
-            <input type="number" class="input-price" value=1>
-            
-            <select name="coin" id="coin">
-                <option value="php">PHP</option>
-                <option value="usd">USD</option>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="ripple">Ripple</option>
-                <option value="bnb">BNB</option>
-                <option value="eth">Ethereum</option>
-            </select>
+            <div class="input-price">
+                <select name="coin" id="coin">
+                    <option value="php">PHP</option>
+                    <option value="usd">USD</option>
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ripple">Ripple</option>
+                    <option value="bnb">BNB</option>
+                    <option value="eth">Ethereum</option>
+                </select>
+                <input type="number" id="price-input" value=1>
+            </div>
+            <div class="output-price">
+                <select name="coin" id="coin">
+                    <option value="php">PHP</option>
+                    <option value="usd">USD</option>
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ripple">Ripple</option>
+                    <option value="bnb">BNB</option>
+                    <option value="eth">Ethereum</option>
+                </select>
 
-            <input type="text" class="output-price" value="1 BTC" readonly>
+                <input type="text" value="1 BTC" readonly>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>
