@@ -5,6 +5,7 @@ let price_change = document.getElementById('prc-change');
 let selected_coin = document.getElementById('seleted-coin');
 let selected_currency = document.getElementById('selected-currency');
 
+price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
 selected_coin.addEventListener('change',getCoinValue)
 selected_currency.addEventListener('change',getCoinValue)
