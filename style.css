@@ -5,12 +5,13 @@
 .container {
     background-color: #7e7e7e;
     height: 300px;
-    width: 70%;
+    width: 70vw;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.webpage-name{
+.currency-header{
     padding-top: 20px;
     text-align: center;
     background-color: lightcoral;
@@ -34,14 +35,22 @@ body {
 .output-price,.input-price{
     margin: 10px 0px;
 }
-input{
+input,select{
     border: 0;
-    border-radius: 10px;
     padding: 10px;
     height: 2.5em;
     width: 10em;
 }
-input:focus{
+input{
+    border-radius: 0 10px 10px 0;
+}
+select{
+    border-radius:  10px 0 0 10px;
+    margin: 0 0 0 10px;
+    height: 4em;
+    width: 5em;
+}
+input:focus,select:focus{
     outline: none;
 }
 input[type=number]::-webkit-inner-spin-button {  
