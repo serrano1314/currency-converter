@@ -16,17 +16,17 @@
             <h1>Currency Converter</h1>
             <p>Currency might change anytime, 
                 especially cryptocurrency because of its volatility</p>
-            <div class="price-change">Price Change(24h): -0.67%</div>
+            <div class="price-change" id="prc-change">Price Change(24h): -0.67%</div>
             </div>
         <div class="converter-card">
             <div class="input-price">
                 <select name="coin" id="coin">
-                    <option value="php">PHP</option>
-                    <option value="usd">USD</option>
-                    <option value="bitcoin">Bitcoin</option>
-                    <option value="ripple">Ripple</option>
+                    <option value="bitcoin">BTC</option>
+                    <option value="ripple">XRP</option>
                     <option value="bnb">BNB</option>
                     <option value="eth">Ethereum</option>
+                    <option value="php">PHP</option>
+                    <option value="usd">USD</option>
                 </select>
                 <input type="number" id="price-input" value=1>
             </div>
@@ -34,13 +34,9 @@
                 <select name="coin" id="coin">
                     <option value="php">PHP</option>
                     <option value="usd">USD</option>
-                    <option value="bitcoin">Bitcoin</option>
-                    <option value="ripple">Ripple</option>
-                    <option value="bnb">BNB</option>
-                    <option value="eth">Ethereum</option>
                 </select>
 
-                <input type="text" value="1 BTC" readonly>
+                <input type="text" value="1 BTC" id='converted-price' readonly>
             </div>
         </div>
     </div>
