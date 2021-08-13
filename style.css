@@ -4,7 +4,7 @@
 }
 .container {
     background-color: rgba(22, 22, 22, 0.603);
-    max-height: 300px;
+    max-height: 500px;
     min-height: 250px;
     width: 70vw;
     color: #fff;
@@ -29,7 +29,7 @@ p{
     margin: 0 10%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
 }
 body {
@@ -42,17 +42,20 @@ body {
 }
 .output-price,.input-price{
     margin: 10px 0px;
+    display: flex;
 }
-input,select{
+input{
     border: 0;
     padding: 10px;
     height: 2.5em;
-    width: 10em;
+    width: 100px;
+    max-width: 10em;
 }
 input{
     border-radius: 0 10px 10px 0;
 }
 select{
+    border: 0;
     border-radius:  10px 0 0 10px;
     margin: 0 0 0 10px;
     height: 4em;
