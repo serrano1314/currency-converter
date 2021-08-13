@@ -19,7 +19,7 @@ function getCoinValue(){
     .then((data)=>{
         console.log(data);
         conv_price.value = ((data[coin][currency])*price_input);
-        price_change.innerText = "Price Change(24h): " + data[coin][`${currency}_24h_change`].toFixed(2);
+        price_change.innerText = "Price Change(24h): " + data[coin][`${currency}_24h_change`].toFixed(2) + "%";
         
     })
 }
