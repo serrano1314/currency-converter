@@ -3,7 +3,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 .container {
-    background-color: rgba(22, 22, 22, 0.603);
+    background-color: rgba(22, 22, 22, 0.514);
     max-height: 500px;
     min-height: 250px;
     width: 70vw;
@@ -78,4 +78,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .price-change{
     margin-top: 15px;
+    padding-left: 10px;
 }
+button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 2em;
+}
+button>svg:hover{
+    fill: gainsboro
+}
+/* button>svg{
+    animation:spin 1s linear;
+} */
+@keyframes spin { 100% { -webkit-transform: rotate(0deg); transform:rotate(180deg); } }
