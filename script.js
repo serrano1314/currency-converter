@@ -9,6 +9,7 @@ price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
 selected_coin.addEventListener('change',getCoinValue)
 selected_currency.addEventListener('change',getCoinValue)
+
 getCoinValue()
 function getCoinValue(){
     let coin = selected_coin.value;
@@ -17,9 +18,9 @@ function getCoinValue(){
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=${currency}&include_24hr_change=true`)
     .then((res)=>res.json())    
     .then((data)=>{
-        console.log(data);
+        console.log(data)
         conv_price.value = ((data[coin][currency])*price_input);
         price_change.innerText = "Price Change(24h): " + data[coin][`${currency}_24h_change`].toFixed(2) + "%";
-        
     })
 }
+setInterval(getCoinValue,20000)
