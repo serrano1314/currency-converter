@@ -3,22 +3,29 @@
     font-family: 'Open Sans', sans-serif;
 }
 .container {
-    background-color: #7e7e7e;
-    height: 300px;
+    background-color: rgba(22, 22, 22, 0.603);
+    max-height: 300px;
+    min-height: 250px;
     width: 70vw;
+    color: #fff;
+    padding: 20px;
     max-width: 600px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border-radius: 20px;
+}
+p{
+    color: rgb(177, 177, 177);
 }
 .currency-header{
     padding-top: 20px;
     text-align: center;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
 }
 .converter-card{
-    background-color: khaki;
-    padding-top: 10px;
+    /* background-color: khaki; */
+    /* padding-top: 10px; */
     margin: 0 10%;
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +33,7 @@
     align-content: center;
 }
 body {
+    background-image: linear-gradient(to bottom right, rgb(243, 69, 69), rgb(61, 61, 236));
     height: 100vh;
     margin: 0;
     display: flex;
@@ -63,4 +71,7 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: lightblue;
     position: fixed;
     bottom: 0;
+}
+.price-change{
+    margin-top: 15px;
 }
