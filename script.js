@@ -6,6 +6,7 @@ let selected_coin = document.getElementById('seleted-coin');
 let selected_currency = document.getElementById('selected-currency');
 let refres_icon = document.getElementById('refresh-icon');
 let refresh_but = document.getElementById('refresh');
+let coin_title = document.getElementById('coin-title')
 
 price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
@@ -25,6 +26,7 @@ function getCoinValue(){
     .then((data)=>{
         stopLoading()
         console.log(data)
+        coin_title.innerText = selected_coin.value.charAt(0).toUpperCase() + selected_coin.value.slice(1);
         conv_price.value = ((data[coin][currency])*price_input);
         prc_change_value = data[coin][`${currency}_24h_change`]
         if(prc_change_value<0) percentage_color = 'red';

@@ -9,7 +9,7 @@
     width: 70vw;
     color: #fff;
     padding: 20px;
-    max-width: 550px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -21,6 +21,7 @@ p{
 .currency-header{
     padding-top: 20px;
     text-align: center;
+    user-select: none;
     /* background-color: lightcoral; */
 }
 .converter-card{
@@ -55,12 +56,16 @@ input{
     border-radius: 0 10px 10px 0;
 }
 select{
-    padding-left: 10px;
+    padding-left: 15px;
     border: 0;
     border-radius:  10px 0 0 10px;
     margin: 0 0 0 10px;
     height: 4em;
     width: 5em;
+    background-color: rgb(240, 240, 240);
+}
+p{
+    max-width: 400px;
 }
 input:focus,select:focus{
     outline: none;
@@ -80,7 +85,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .price-change{
     margin-top: 15px;
-    padding-left: 10px;
+    padding-left: 12px;
+    text-align: center;
 }
 button{
     background-color: rgba(0, 0, 0, 0);
