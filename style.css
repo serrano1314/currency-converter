@@ -9,7 +9,7 @@
     width: 70vw;
     color: #fff;
     padding: 20px;
-    max-width: 600px;
+    max-width: 550px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -55,6 +55,7 @@ input{
     border-radius: 0 10px 10px 0;
 }
 select{
+    padding-left: 10px;
     border: 0;
     border-radius:  10px 0 0 10px;
     margin: 0 0 0 10px;
