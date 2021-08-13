@@ -11,7 +11,7 @@ price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
 selected_coin.addEventListener('change',getCoinValue)
 selected_currency.addEventListener('change',getCoinValue)
-let percentage_color = 'lightgreen';
+let percentage_color = 'white';
 refresh_but.onclick = getCoinValue;
 getCoinValue()
 function getCoinValue(){
@@ -27,9 +27,9 @@ function getCoinValue(){
         console.log(data)
         conv_price.value = ((data[coin][currency])*price_input);
         prc_change_value = data[coin][`${currency}_24h_change`]
-        if(prc_change_value<0){
-            percentage_color = 'red';
-        }
+        if(prc_change_value<0) percentage_color = 'red';
+        if(prc_change_value>0) percentage_color = 'lightgreen';
+        
         price_change.innerText = prc_change_value.toFixed(2) + "%";
         price_change.style.color = percentage_color;
     })
