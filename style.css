@@ -72,9 +72,11 @@ input[type=number]::-webkit-inner-spin-button {
 .foot{
     text-align: center;
     width: 100%;
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.5);
     position: fixed;
     bottom: 0;
+    font-size: 10px;
+    text-align: start;
 }
 .price-change{
     margin-top: 15px;
