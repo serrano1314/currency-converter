@@ -29,7 +29,7 @@ p{
 .converter-card{
     /* background-color: khaki; */
     /* padding-top: 10px; */
-    margin: 0 10%;
+    margin: 0 10% 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -53,8 +53,6 @@ input{
     height: 2.5em;
     width: 100px;
     max-width: 10em;
-}
-input{
     border-radius: 0 10px 10px 0;
 }
 select{
