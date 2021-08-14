@@ -20,11 +20,8 @@ refresh_but.onclick = getCoinValue;
 getCoinValue()
 setInterval(getCoinValue,10000)
 function getCoinValue(){
-    try{
-        myChart.destroy();}
-    catch(error){
-        console.log('error')
-    }
+    try{myChart.destroy();}
+    catch(error){}
     loading();
     let coin = selected_coin.value;
     let currency = selected_currency.value;
@@ -68,10 +65,10 @@ function getCoinValue(){
                 },
                 scales: {
                     x: {
-                    grid: {display: false,drawBorder: false,}
+                        grid: {display: false,drawBorder: false,}
                     },
                     y: {
-                    grid: {display: false,drawBorder: false,}
+                        grid: {display: false,drawBorder: false,}
                     },
                 },
             }
