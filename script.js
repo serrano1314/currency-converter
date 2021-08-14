@@ -57,7 +57,7 @@ function getChart(){
     catch(error){}
     let coin = selected_coin.value;
     let currency = selected_currency.value;
-    fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=${currency}&days=7&interval=daily`)
+    fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=${currency}&days=6&interval=daily`)
     .then((res)=>res.json())    
     .then((dataPrice)=>{
         console.log(dataPrice.prices)
