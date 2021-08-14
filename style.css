@@ -109,6 +109,7 @@ button>svg:hover{
     /* background-color: thistle; */
     width: 175px;
     height: 100px;
+    padding-left: 20px;
 }
 #weekly-chart{
     width: inherit;
