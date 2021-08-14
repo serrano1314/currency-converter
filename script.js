@@ -18,7 +18,10 @@ selected_coin.addEventListener('change',()=>{
     getCoinValue();
     getChart();
 })
-selected_currency.addEventListener('change',getCoinValue)
+selected_currency.addEventListener('change',()=>{
+    getCoinValue();
+    getChart();
+})
 let percentage_color = 'white';
 // refresh_but.onclick = getCoinValue;
 refresh_but.addEventListener('click',()=>{
