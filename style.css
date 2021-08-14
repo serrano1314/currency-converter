@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
     user-select: none;
 }
@@ -101,6 +102,17 @@ button{
 }
 button>svg:hover{
     fill: gainsboro
+}
+
+.chart{
+    /* background-color: thistle; */
+    width: 175px;
+    height: 100px;
+}
+#weekly-chart{
+    width: 170px;
+    height: 100px;
+    padding: 0;
 }
 /* button>svg{
     animation:spin 1s linear;
