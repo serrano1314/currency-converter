@@ -9,7 +9,7 @@ let refresh_but = document.getElementById('refresh');
 let coin_title = document.getElementById('coin-title');
 let chart_container = document.getElementById('weekly-chart');
 let ctx = document.getElementById('weekly-chart').getContext('2d');
-let myChart;
+var myChart;
 
 price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
@@ -18,7 +18,13 @@ selected_currency.addEventListener('change',getCoinValue)
 let percentage_color = 'white';
 refresh_but.onclick = getCoinValue;
 getCoinValue()
+setInterval(getCoinValue,10000)
 function getCoinValue(){
+    try{
+        myChart.destroy();}
+    catch(error){
+        console.log('error')
+    }
     loading();
     let coin = selected_coin.value;
     let currency = selected_currency.value;
@@ -71,9 +77,7 @@ function getCoinValue(){
             }
         });
     })
-    myChart.destroy();
 }
-setInterval(getCoinValue(),10000)
 function loading(){
     refres_icon.style.animation = "spin 0.5s linear infinite"
 }
