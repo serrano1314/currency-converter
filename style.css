@@ -16,6 +16,7 @@
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 20px;
+    animation: fadeIn .6s linear;
 }
 p{
     color: rgb(177, 177, 177);
@@ -85,8 +86,8 @@ input[type=number]::-webkit-inner-spin-button {
     text-align: start;
 }
 .price-change{
-    display: grid | inline;
-    grid-column-start: 3;
+    display: inline;
+    /* grid-column-start: 3; */
     margin-top: 15px;
     padding-left: 12px;
     text-align: center;
@@ -117,4 +118,11 @@ button>svg:hover{
 /* button>svg{
     animation:spin 1s linear;
 } */
-@keyframes spin { 100% { -webkit-transform: rotate(0deg); transform:rotate(180deg); } }
+@keyframes spin { 100% { 
+    -webkit-transform: rotate(0deg); 
+    transform:rotate(180deg); } 
+}
+@keyframes fadeIn {
+    0% {opacity:0;transform: scale(0.95);}
+    100% {opacity:1;transform: scale(1);}
+}
