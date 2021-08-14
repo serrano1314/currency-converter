@@ -111,8 +111,8 @@ button>svg:hover{
     height: 100px;
 }
 #weekly-chart{
-    width: 170px;
-    height: 100px;
+    width: inherit;
+    height: inherit;
     padding: 0;
 }
 /* button>svg{
