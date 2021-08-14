@@ -85,6 +85,8 @@ input[type=number]::-webkit-inner-spin-button {
     text-align: start;
 }
 .price-change{
+    display: grid | inline;
+    grid-column-start: 3;
     margin-top: 15px;
     padding-left: 12px;
     text-align: center;

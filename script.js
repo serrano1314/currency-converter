@@ -53,6 +53,7 @@ function getCoinValue(){
     })
 }
 function getChart(){
+    loading();
     try{myChart.destroy();}
     catch(error){}
     let coin = selected_coin.value;
@@ -60,6 +61,7 @@ function getChart(){
     fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=${currency}&days=6&interval=daily`)
     .then((res)=>res.json())    
     .then((dataPrice)=>{
+        stopLoading();
         console.log(dataPrice.prices)
         Chart.defaults.scale.ticks.display = false;
         myChart = new Chart(ctx, {
