@@ -1,4 +1,5 @@
-
+let version = 'v0.2.1'
+document.querySelector('.foot').innerHTML = `${version} (ongoing project). Powered by CoinGecko`
 let price_input_text = document.getElementById('price-input');
 let conv_price = document.getElementById('converted-price');
 let price_change = document.getElementById('change-value');
@@ -13,23 +14,30 @@ var myChart;
 
 price_input_text.addEventListener('change',getCoinValue)
 price_input_text.addEventListener('keyup',getCoinValue)
-selected_coin.addEventListener('change',getCoinValue)
+selected_coin.addEventListener('change',()=>{
+    getCoinValue();
+    getChart();
+})
 selected_currency.addEventListener('change',getCoinValue)
 let percentage_color = 'white';
-refresh_but.onclick = getCoinValue;
-getCoinValue()
+// refresh_but.onclick = getCoinValue;
+refresh_but.addEventListener('click',()=>{
+    getCoinValue();
+    getChart();
+})
+getCoinValue();
+getChart();
 setInterval(getCoinValue,10000)
 function getCoinValue(){
-    try{myChart.destroy();}
-    catch(error){}
-    loading();
     let coin = selected_coin.value;
     let currency = selected_currency.value;
-    conv_price.value = "loading...";
     let price_input = document.getElementById('price-input').value;
+    loading();
+    conv_price.value = "loading...";
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=${currency}&include_24hr_change=true`)
     .then((res)=>res.json())    
     .then((data)=>{
+        stopLoading()
         console.log(data)
         coin_title.innerText = selected_coin.value.charAt(0).toUpperCase() + selected_coin.value.slice(1);
         conv_price.value = ((data[coin][currency])*price_input);
@@ -40,14 +48,16 @@ function getCoinValue(){
         price_change.innerText = prc_change_value.toFixed(2) + "%";
         price_change.style.color = percentage_color;
     })
-
-    //chart
-
+}
+function getChart(){
+    try{myChart.destroy();}
+    catch(error){}
+    let coin = selected_coin.value;
+    let currency = selected_currency.value;
     fetch(`https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=${currency}&days=7&interval=daily`)
     .then((res)=>res.json())    
     .then((dataPrice)=>{
         console.log(dataPrice.prices)
-        stopLoading()
         Chart.defaults.scale.ticks.display = false;
         myChart = new Chart(ctx, {
             type: 'line',
