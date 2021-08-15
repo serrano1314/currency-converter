@@ -30,7 +30,7 @@ p{
 .converter-card{
     /* background-color: khaki; */
     /* padding-top: 10px; */
-    margin: 0 10% 20px;
+    margin: 0 10% 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -108,13 +108,18 @@ button>svg:hover{
 .chart{
     /* background-color: thistle; */
     width: 175px;
-    height: 100px;
+    height: 80px;
     padding-left: 20px;
 }
 #weekly-chart{
     width: inherit;
     height: inherit;
     padding: 0;
+}
+#logo-icon{
+    margin: 0;
+    height: 30px;
+    width: auto;
 }
 /* button>svg{
     animation:spin 1s linear;
