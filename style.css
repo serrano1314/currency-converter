@@ -10,7 +10,7 @@
     min-height: 250px;
     width: 70vw;
     color: #fff;
-    padding: 20px;
+    padding: 25px;
     max-width: 500px;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ p{
     color: rgb(177, 177, 177);
 }
 .currency-header{
-    padding-top: 20px;
+    /* padding-top: 10px; */
     text-align: center;
     user-select: none;
     /* background-color: lightcoral; */
