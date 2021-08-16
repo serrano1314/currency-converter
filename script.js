@@ -36,7 +36,7 @@ function getCoinValue(){
     let currency = selected_currency.value;
     let price_input = document.getElementById('price-input').value;
     loading();
-    conv_price.value = "loading...";
+    conv_price.value = "updating...";
     fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=${currency}&include_24hr_change=true`)
     .then((res)=>res.json())    
     .then((data)=>{
